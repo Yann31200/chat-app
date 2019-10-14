@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Contact from './conponents/Contact';
+
+const alice = {
+  name: 'Alice Mc Donald',
+  url: 'https://randomuser.me/api/portraits/women/51.jpg',
+  status: true,
+}
+
+const ethel = {
+  name: 'Ethel Kelley',
+  url: 'https://randomuser.me/api/portraits/women/61.jpg',
+  status: false,
+}
+
+const charlene = {
+  name: 'Charlene Hawkins',
+  url: 'https://randomuser.me/api/portraits/women/8.jpg',
+  status: true,
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Contact {...alice} />
+      <Contact {...charlene} />
+      <Contact {...ethel} />
     </div>
   );
 }
